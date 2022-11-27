@@ -4,8 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.1"
 
 gem "bootsnap", require: false
+gem "devise", "~> 4.8"
+gem "devise-jwt", "~> 0.10.0"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "rack-cors"
 gem "rails", "~> 7.0.3"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -23,8 +26,6 @@ gem "rails", "~> 7.0.3"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -34,4 +35,3 @@ end
 group :development do
 
 end
-
