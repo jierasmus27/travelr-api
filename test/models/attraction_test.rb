@@ -5,6 +5,10 @@ class AttractionTest < ActiveSupport::TestCase
     @attraction = attractions(:castle_of_good_hope)
   end
 
+  test 'the attraction is valid' do
+    assert @attraction.valid?
+  end
+
   test 'the name has to be present' do
     new_attraction = Attraction.new
 
