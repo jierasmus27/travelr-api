@@ -20,4 +20,7 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Run tests
+        env:
+          RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_TEST_KEY }}
         run: bundle exec rake
