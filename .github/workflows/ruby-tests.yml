@@ -37,6 +37,7 @@ jobs:
           bundle exec rake db:schema:load
         env:
           RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_TEST_KEY }}
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
       - name: Run tests
