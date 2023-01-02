@@ -31,3 +31,4 @@
 /config/credentials/production.key
 
 /config/credentials/test.key
+.tool-versions
